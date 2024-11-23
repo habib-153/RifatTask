@@ -5,9 +5,7 @@ import { FieldValues, SubmitHandler } from "react-hook-form";
 
 const ChangePassword = () => {
     //const [changePassword] = useChangePasswordMutation();
-    // const dispatch = useAppDispatch();
-    // const navigate = useNavigate();
-  
+    // const dispatch = useAppDispatch();  
     const onSubmit: SubmitHandler<FieldValues> = async (data) => {
       console.log(data);
   
