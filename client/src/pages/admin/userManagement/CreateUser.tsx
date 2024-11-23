@@ -9,13 +9,12 @@ import { departmentOptions } from "../../../constant/global";
 
 const userDefaultValues = {
   name: {
-    firstName: 'I am ',
-    middleName: 'Student',
-    lastName: 'Number 1',
+    firstName: '',
+    lastName: '',
   },
-  email: 'abc@gmail.com',
-  userId: '0152330001',
-  password: 'student123',
+  email: '',
+  userId: '',
+  password: '',
   dept: "DS"
 };
 
@@ -26,11 +25,7 @@ const CreateUser = () => {
     const userData = { 
       ...data
     }
-    // console.log(userData)
-    // const formData = new FormData()
-    // formData.append('data', JSON.stringify(userData))
 
-    //console.log(Object.fromEntries(formData))
     const result = await addUser(userData)
 
     if (result?.data?.success) {
@@ -47,9 +42,6 @@ const CreateUser = () => {
           <Row gutter={8}>
             <Col span={24} md={{ span: 12 }} lg={{ span: 8 }}>
               <PHInput type="text" name="name.firstName" label="First Name" />
-            </Col>
-            <Col span={24} md={{ span: 12 }} lg={{ span: 8 }}>
-              <PHInput type="text" name="name.middleName" label="Middle Name" />
             </Col>
             <Col span={24} md={{ span: 12 }} lg={{ span: 8 }}>
               <PHInput type="text" name="name.lastName" label="Last Name" />
