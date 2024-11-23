@@ -10,7 +10,7 @@ const app: Application = express();
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({ origin: ['https://autoattend.vercel.app/', 'https://www.autoattend.vercel.app/', 'https://autoattend.vercel.app/login'], credentials: true}));
+app.use(cors({ origin: ['https://autoattend.vercel.app/', 'https://www.autoattend.vercel.app/'], credentials: true}));
 
 //  application routes
 app.use('/api/v1', router)
